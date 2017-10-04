@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Include the valet config file.
-source $(dirname "$0")/valet-wp-config.sh
+source $(dirname "$0")/wp-config.sh
 
 if [ $# -ne 1 ]; then
   echo -e "\x1b[31mError:\x1b[0m You forgot to specify a site name. eg: site-name"

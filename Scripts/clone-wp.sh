@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Include the valet config file.
-source $(dirname "$0")/valet-wp-config.sh
+source $(dirname "$0")/wp-config.sh
 
 ORIGINAL_SITE=$1
 NEW_SITE=$2
