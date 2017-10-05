@@ -1,8 +1,9 @@
 # Automated Localhost Installs #
 
 ### Requirements
-* WP-CLI
-* Alfred + Alfred Workflows *(Optional)*
+* Localhost install ( [Laravel Valet](https://laravel.com/docs/master/valet#installation), [MAMP](https://www.mamp.info/en/), [XAMPP](https://www.apachefriends.org/index.html) etc.)
+* [WP-CLI](http://wp-cli.org/)
+* [Alfred (with Powerpack)](https://www.alfredapp.com/) *(Optional)*
 
 ### Installation
 
