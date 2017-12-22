@@ -66,6 +66,11 @@ $ install-wp.sh test-site
 $ clone-wp.sh test-site test-site-clone
 ```
 
+**Update all Sites:**
+```bash
+$ update-wp.sh
+```
+
 **Uninstall Test Site:**
 ```bash
 $ uninstall-wp.sh test-site
@@ -89,6 +94,13 @@ Step 2:
 In step 2, simply enter the new site clone name.
 ```
 test-site-clone
+```
+
+**Update All Sites:**
+The following command will loop through all WordPress installs inside of your localhost directory and update WordPress core, all plugins and all themes.
+*Future Release:* In future this command will accept a parameter to update a single site on the network.
+```
+wp update
 ```
 
 **Uninstall:**
