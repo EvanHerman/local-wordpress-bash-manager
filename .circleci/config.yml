@@ -12,6 +12,10 @@ jobs:
 
     steps:
       - checkout
+      # Install pip
+      - run:
+          name: Install pip
+          command: 'wget http://peak.telecommunity.com/dist/ez_setup.py && python ez_setup.py'
       # Update npm
       - run:
           name: Update npm
