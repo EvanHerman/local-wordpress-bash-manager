@@ -12,7 +12,7 @@ general:
 # No tests contained in the CI/CD pipeline. Force 'no tests' to pass.
 test:
   override:
-    - echo "pass"
+    - "true"
 
 dependencies:
   pre:
