@@ -4,6 +4,11 @@ machine:
   python:
     version: 2.7.10
 
+general:
+  branches:
+    only:
+     - master
+
 dependencies:
   pre:
     - npm run install-docs
