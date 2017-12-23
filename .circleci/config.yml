@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:4.8.2
-      - image: circleci/python:latest
+      - image: circleci/python:3.6.2-stretch-browsers
 
     steps:
       - checkout
