@@ -1,0 +1,22 @@
+sudo: true
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - master
+
+before_install:
+  # Install mkdocs, install theme
+  - npm run install-docs
+
+install:
+  # Install mkdocs, install theme
+  - npm run install-docs
+
+script:
+  # Deploy the documentation
+  - npm run docs-deploy

@@ -9,4 +9,4 @@ Using the tools bundled in this repository, you can easily manage local WordPres
 
 ### Installation & Usage ###
 
-For installation and usage instructions, please take a look at our [documentation](https://local-wordpress-bash-manager.github.io/EvanHerman).
+For installation and usage instructions, please take a look at our [documentation](https://EvanHerman.github.io/local-wordpress-bash-manager/).

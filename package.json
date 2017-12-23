@@ -6,13 +6,14 @@
 	"author": "Code Parrots",
 	"license": "GPL-2.0",
 	"repository": "EvanHerman/local-wordpress-bash-manager",
-	"homepage": "https://local-wordpress-bash-manager.github.io/EvanHerman",
+	"homepage": "https://EvanHerman.github.io/local-wordpress-bash-manager/",
 	"bugs": {
 		"url": "https://github.com/EvanHerman/local-wordpress-bash-manager/issues"
 	},
 	"scripts": {
-		"install-docs": "sudo pip install mkdocs && sudo pip install mkdocs-material && npm submodule update --init",
+		"install-docs": "sudo pip install mkdocs && sudo pip install mkdocs-material",
 		"docs": "cd Documentation && mkdocs build",
-		"docs-preview": "open http://127.0.0.1:8000/ && cd Documentation && mkdocs serve"
+		"docs-preview": "open http://127.0.0.1:8000/ && cd Documentation && mkdocs serve",
+		"docs-deploy": "cd Documentation && mkdocs gh-deploy"
 	}
 }
