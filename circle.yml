@@ -4,12 +4,9 @@ machine:
   python:
     version: 2.7.10
 
-general:
-  branches:
-    only:
-     - master
-     ignore:
-      - gh-pages
+branches:
+  only:
+    - master
 
 # No tests contained in the CI/CD pipeline. Force 'no tests' to pass.
 test:
