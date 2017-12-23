@@ -1,0 +1,52 @@
+# Site Info
+site_name: 'Local WordPress Bash Management'
+site_author: 'Evan Herman'
+site_url: 'https://local-wordpress-bash-manager.github.io/EvanHerman'
+
+# Pages
+pages:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Usage Guide: usage-guide.md
+
+# Copyright
+copyright: Evan Herman &copy; 2017
+
+# Theme & Overrides
+theme:
+  name: 'material'
+  custom_dir: 'docs/theme'
+  favicon: 'docs/assets/img/favicon.ico'
+  palette:
+    primary: 'blue'
+    accent: 'orange'
+extra:
+  social:
+  - type: globe
+    link: https://www.evan-herman.com
+  - type: github-alt
+    link: https://github.com/EvanHerman
+  - type: twitter
+    link: https://twitter.com/EvanMHerman
+
+
+# Repository Info.
+repo_name: 'EvanHerman/local-wordpress-bash-manager'
+repo_url: 'https://github.com/EvanHerman/local-wordpress-bash-manager'
+
+# Material Theme Extensions
+markdown_extensions:
+  - codehilite
+
+# Custom CSS Overrides
+# extra_css:
+  # - 'assets/css/extra.css'
+
+# Custom JS Overrides
+# extra_javascript:
+  # - 'assets/js/extra.js'
+
+# Google Analytics
+google_analytics:
+  - UA-44580097-2
+  - auto

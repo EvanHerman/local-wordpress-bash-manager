@@ -1,0 +1,18 @@
+{
+	"name": "cp-settings",
+	"title": "Code Parrots Settings",
+	"description": "Speed up development of plugin/theme option pages.",
+	"version": "0.0.1",
+	"author": "Code Parrots",
+	"license": "GPL-2.0",
+	"repository": "EvanHerman/local-wordpress-bash-manager",
+	"homepage": "https://local-wordpress-bash-manager.github.io/EvanHerman",
+	"bugs": {
+		"url": "https://github.com/EvanHerman/local-wordpress-bash-manager/issues"
+	},
+	"scripts": {
+		"install-docs": "sudo pip install mkdocs && sudo pip install mkdocs-material && npm submodule update --init",
+		"docs": "cd Documentation && mkdocs build",
+		"docs-preview": "open http://127.0.0.1:8000/ && cd Documentation && mkdocs serve"
+	}
+}
