@@ -61,14 +61,15 @@ Error: You forgot to specify a site name. eg: site-name
 $ install-wp.sh test-site
 ```
 
+**Update Test Site:**
+Once the above command is entered you will be asked if you would like to update all sites. Type `y` to continue, or `n` to cancel.
+```bash
+$ update-wp.sh test-site
+```
+
 **Clone Test Site:**
 ```bash
 $ clone-wp.sh test-site test-site-clone
-```
-
-**Update all Sites:**
-```bash
-$ update-wp.sh
 ```
 
 **Uninstall Test Site:**
@@ -97,8 +98,7 @@ test-site-clone
 ```
 
 **Update All Sites:**
-The following command will loop through all WordPress installs inside of your localhost directory and update WordPress core, all plugins and all themes.
-*Future Release:* In future this command will accept a parameter to update a single site on the network.
+The following command will loop through all WordPress installs inside of your localhost directory and update WordPress core, all plugins and all themes. Once the above command is entered you will be asked if you would like to update all sites. Type `y` to continue, or `n` to cancel.
 ```
 wp update
 ```
@@ -106,4 +106,47 @@ wp update
 **Uninstall:**
 ```
 wp delete test-site
+```
+
+##### Command Line Usage #####
+
+If you have not done so, please read through the [Installation](#Installation) section for install instructions.
+
+###### Install
+
+**Install Site:**
+```bash
+$ install-wp.sh example-site
+```
+
+###### Update
+
+**Update All Sites:**
+Once the above command is entered you will be asked if you would like to update all sites. Type `y` to continue, or `n` to cancel.
+```bash
+$ update-wp.sh example-site
+```
+
+**Update Single Site:**
+```bash
+$ update-wp.sh example-site
+```
+
+**Update Multiple Sites:**
+```bash
+$ update-wp.sh example-site,example-site-2,example-site-3
+```
+
+###### Clone
+
+**Clone Site:**
+```bash
+$ clone-wp.sh example-site example-site-clone
+```
+
+###### Delete
+
+**Delete Site:**
+```
+wp delete example-site
 ```
