@@ -8,6 +8,8 @@ general:
   branches:
     only:
      - master
+     ignore:
+      - gh-pages
 
 # No tests contained in the CI/CD pipeline. Force 'no tests' to pass.
 test:
