@@ -78,7 +78,7 @@ $ uninstall-wp.sh test-site
 $ uninstall-wp.sh test-site-clone
 ```
 
-##### Alfred *(from the Alfred launcher)*: #####
+### Alfred Usage *(from the Alfred launcher)*: ###
 
 **Install:**
 ```
@@ -108,18 +108,18 @@ wp update
 wp delete test-site
 ```
 
-##### Command Line Usage #####
+### Command Line Usage ###
 
 If you have not done so, please read through the [Installation](#Installation) section for install instructions.
 
-###### Install
+###### Install ######
 
 **Install Site:**
 ```bash
 $ install-wp.sh example-site
 ```
 
-###### Update
+###### Update ######
 
 **Update All Sites:**
 Once the above command is entered you will be asked if you would like to update all sites. Type `y` to continue, or `n` to cancel.
@@ -137,14 +137,14 @@ $ update-wp.sh example-site
 $ update-wp.sh example-site,example-site-2,example-site-3
 ```
 
-###### Clone
+###### Clone ######
 
 **Clone Site:**
 ```bash
 $ clone-wp.sh example-site example-site-clone
 ```
 
-###### Delete
+###### Delete ######
 
 **Delete Site:**
 ```
