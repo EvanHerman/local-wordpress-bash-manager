@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 6.1.0
+  python:
+    version: 2.7.10
+
+dependencies:
+  pre:
+    - npm run install-docs
+  post:
+    - npm run docs-deploy
