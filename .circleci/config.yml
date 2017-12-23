@@ -7,13 +7,19 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/python:3.6.1
+      - image: circleci/node:4.8.2
 
     steps:
       - checkout
-
+      # Update npm
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
       # Install docs & dependencies.
-      - run: npm run install-docs
-
+      - run:
+          name: Install mkdocs & dependencies
+          command: 'npm run install-docs'
       # Build & Deploy the docs.
-      - run: npm run docs-deploy
+      - run:
+          name: Build & deploy the docs
+          command: 'npm run docs-deploy'
