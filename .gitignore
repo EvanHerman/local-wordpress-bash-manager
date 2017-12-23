@@ -1,1 +1,2 @@
-Documentation/Site/
+Documentation/Site/*
+!Documentation/Site/circle.yml
