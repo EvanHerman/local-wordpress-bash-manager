@@ -1,0 +1,124 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Local WordPress \nBash Manager\n\n\nDead Simple Local WordPress Management\n\n\nUsing the tools bundled in this repository, you can easily manage local WordPress installs - including installing, deleting, cloning and updating local WordPress instances. The following tools are a set of bash scripts that allow for easy management of your local sites through the command line, or using \nAlfred\n.\n\n\nThese scripts can be launched from the command line or using \nAlfred\n \n(with the \npowerpack\n addon)\n.\n\n\nRequirements\n\n\n\n\nLocalhost install ( \nLaravel Valet\n, \nMAMP\n, \nXAMPP\n etc.)\n\n\nWP-CLI\n\n\nAlfred (with Powerpack)\n \n(Optional)\n\n\n\n\nQuick start\n\n\n1) Clone the local-wordpress-bash-manager repository onto your machine.\n\n\n$ git clone https://github.com/EvanHerman/local-wordpress-bash-manager.git\n\n\n\n\n\n2) Copy the \nautomated-local-wordpress-instal/Scripts\n directory into \n/Users/$USER/\n.\n\n\n$ \ncd\n local-wordpress-bash-manager\n$ cp -R Scripts ~/\n\n\n\n\n\n3) Add the \nScripts\n directory to your \nPATH\n by adding the following to your \n.bash_profile\n.\n\n\nexport\n \nPATH\n=\n/Users/\n$USER\n/Scripts:\n$PATH\n\n\n\n\n\n\n4) Update the values inside of \nwp-config.sh\n with the values for your localhost install.\n\n\n5) \nOptional\n Install the Alfred workflow script included in the \n/Launchers\n directory. Double click \nAlfred -  Valet WordPress Commands\n to install.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#local-wordpress-bash-manager", 
+            "text": "", 
+            "title": "Local WordPress Bash Manager"
+        }, 
+        {
+            "location": "/#dead-simple-local-wordpress-management", 
+            "text": "Using the tools bundled in this repository, you can easily manage local WordPress installs - including installing, deleting, cloning and updating local WordPress instances. The following tools are a set of bash scripts that allow for easy management of your local sites through the command line, or using  Alfred .  These scripts can be launched from the command line or using  Alfred   (with the  powerpack  addon) .", 
+            "title": "Dead Simple Local WordPress Management"
+        }, 
+        {
+            "location": "/#requirements", 
+            "text": "Localhost install (  Laravel Valet ,  MAMP ,  XAMPP  etc.)  WP-CLI  Alfred (with Powerpack)   (Optional)", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/#quick-start", 
+            "text": "1) Clone the local-wordpress-bash-manager repository onto your machine.  $ git clone https://github.com/EvanHerman/local-wordpress-bash-manager.git  2) Copy the  automated-local-wordpress-instal/Scripts  directory into  /Users/$USER/ .  $  cd  local-wordpress-bash-manager\n$ cp -R Scripts ~/  3) Add the  Scripts  directory to your  PATH  by adding the following to your  .bash_profile .  export   PATH = /Users/ $USER /Scripts: $PATH   4) Update the values inside of  wp-config.sh  with the values for your localhost install.  5)  Optional  Install the Alfred workflow script included in the  /Launchers  directory. Double click  Alfred -  Valet WordPress Commands  to install.", 
+            "title": "Quick start"
+        }, 
+        {
+            "location": "/getting-started/", 
+            "text": "Getting Started\n\n\nInstallation\n\n\n1) Clone the local-wordpress-bash-manager repository\n\n\n$ git clone https://github.com/EvanHerman/local-wordpress-bash-manager.git\n\n\n\n\n\n2) Copy the \nautomated-local-wordpress-instal/Scripts\n directory into \n/Users/$USER/\n\n\n$ \ncd\n local-wordpress-bash-manager\n$ cp -R Scripts ~/\n\n\n\n\n\n3) Add the \nScripts\n directory to your \nPATH\n by adding the following to your \n.bash_profile\n.\n\n\nexport\n \nPATH\n=\n/Users/\n$USER\n/Scripts:\n$PATH\n\n\n\n\n\n\nYou can confirm that the path was added properly and the script was found by running the following:\n\n\ninstall-wp.sh\n\n\n\n\n\nSince you have not specified a site/directory name, you should see the following output:\n\n\nError: You forgot to specify a site name. eg: site-name\n\n\n\n\n\n4) Update the values inside of \nwp-config.sh\n with the values for your localhost install.\n\n\nPath to Local Install Files\n\n\n\n\nSITE_PATH\n - The root directory of your WordPress installs.\n\n\n\n\n\n\nFor valet, this is the parked directory that your sites are served from. You can check parked directory paths by running the command \n$ valet paths\n.\n\n\n\n\nDatabase Configuration\n\n\n\n\nDB_USER\n - The database username. \neg: root\n\n\nDB_PASS\n - The database user password. \neg: password\n\n\nDB_HOST\n - The database host. \neg: localhost\n\n\n\n\nSite Data\n\n\n\n\nADMIN_USERNAME\n - WordPress username\n\n\nADMIN_PASSWORD\n - WordPress user password\n\n\nADMIN_EMAIL\n - WordPress user email address.\n\n\nTLD\n - Top level domain. How is the site accessed? \neg: .com, .org, .local, .dev\n\n\n\n\n5) \nOptional\n Install the Alfred workflow script included in the \n/Launchers\n directory. Double click \nAlfred -  Valet WordPress Commands\n to install.\n\n\nUsage\n\n\nSee our \nUsage Guide\n for a list of available commands, explanations for each command and demo usage.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/getting-started/#getting-started", 
+            "text": "", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/getting-started/#installation", 
+            "text": "1) Clone the local-wordpress-bash-manager repository  $ git clone https://github.com/EvanHerman/local-wordpress-bash-manager.git  2) Copy the  automated-local-wordpress-instal/Scripts  directory into  /Users/$USER/  $  cd  local-wordpress-bash-manager\n$ cp -R Scripts ~/  3) Add the  Scripts  directory to your  PATH  by adding the following to your  .bash_profile .  export   PATH = /Users/ $USER /Scripts: $PATH   You can confirm that the path was added properly and the script was found by running the following:  install-wp.sh  Since you have not specified a site/directory name, you should see the following output:  Error: You forgot to specify a site name. eg: site-name  4) Update the values inside of  wp-config.sh  with the values for your localhost install.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/getting-started/#path-to-local-install-files", 
+            "text": "SITE_PATH  - The root directory of your WordPress installs.    For valet, this is the parked directory that your sites are served from. You can check parked directory paths by running the command  $ valet paths .", 
+            "title": "Path to Local Install Files"
+        }, 
+        {
+            "location": "/getting-started/#database-configuration", 
+            "text": "DB_USER  - The database username.  eg: root  DB_PASS  - The database user password.  eg: password  DB_HOST  - The database host.  eg: localhost", 
+            "title": "Database Configuration"
+        }, 
+        {
+            "location": "/getting-started/#site-data", 
+            "text": "ADMIN_USERNAME  - WordPress username  ADMIN_PASSWORD  - WordPress user password  ADMIN_EMAIL  - WordPress user email address.  TLD  - Top level domain. How is the site accessed?  eg: .com, .org, .local, .dev   5)  Optional  Install the Alfred workflow script included in the  /Launchers  directory. Double click  Alfred -  Valet WordPress Commands  to install.", 
+            "title": "Site Data"
+        }, 
+        {
+            "location": "/getting-started/#usage", 
+            "text": "See our  Usage Guide  for a list of available commands, explanations for each command and demo usage.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/usage-guide/", 
+            "text": "Using the Manager\n\n\nCommand Line Usage\n\n\nIf you have not done so, please read through the \nInstallation\n section for install instructions.\n\n\nInstall Site\n\n\n$ install-wp.sh example-site\n\n\n\n\n\nUpdate Site(s)\n\n\nUpdate All Sites:\n\nThe following command will loop through all WordPress installs inside of your localhost directory and update WordPress core, all plugins and all themes. Once the above command is entered you will be asked if you would like to update all sites. Type \ny\n to continue, or \nn\n to cancel.\n\n\n$ update-wp.sh example-site\n\n\n\n\n\nUpdate Single Site:\n\n\n$ update-wp.sh example-site\n\n\n\n\n\nUpdate Multiple Sites:\n\n\n$ update-wp.sh example-site,example-site-2,example-site-3\n\n\n\n\n\nDelete Site\n\n\nwp delete example-site\n\n\n\n\n\nClone Site\n\n\nThe \nclone-wp.sh\n script accepts two parameters. First, the site you want to clone. Second, the name of the new site where the existing site will be cloned to.\n\n\n$ clone-wp.sh example-site example-site-clone\n\n\n\n\n\n\n\n\nAlfred Usage\n\n\nAll of the Alfred launcher commands can be executed from the Alfred prompt. Toggle Alfred, or use your custom shortcode to show Alfred, and enter the commands below to execute the associated bash script.\n\n\nToggle Alfred\n\n\n\n\nAlred Launcher\n\n\n\n\nInstall Site\n\n\nwp create test-site\n\n\n\n\n\nUpdate Site(s)\n\n\nUpdate All Sites:\n\n\nwp update\n\n\n\n\n\nUpdate Single Site:\n\n\nwp update test-site\n\n\n\n\n\nUpdate Multiple Sites:\n\n\nwp update test-site,test-site-2,test-site-3\n\n\n\n\n\nDelete Site\n\n\nwp delete test-site\n\n\n\n\n\nClone Site\n\n\nStep 1:\n\n\nwp clone test-site\n\n\n\n\n\nStep 2:\nIn step 2, simply enter the new site clone name.\n\n\ntest-site-clone", 
+            "title": "Usage Guide"
+        }, 
+        {
+            "location": "/usage-guide/#using-the-manager", 
+            "text": "", 
+            "title": "Using the Manager"
+        }, 
+        {
+            "location": "/usage-guide/#command-line-usage", 
+            "text": "If you have not done so, please read through the  Installation  section for install instructions.", 
+            "title": "Command Line Usage"
+        }, 
+        {
+            "location": "/usage-guide/#install-site", 
+            "text": "$ install-wp.sh example-site", 
+            "title": "Install Site"
+        }, 
+        {
+            "location": "/usage-guide/#update-sites", 
+            "text": "Update All Sites: \nThe following command will loop through all WordPress installs inside of your localhost directory and update WordPress core, all plugins and all themes. Once the above command is entered you will be asked if you would like to update all sites. Type  y  to continue, or  n  to cancel.  $ update-wp.sh example-site  Update Single Site:  $ update-wp.sh example-site  Update Multiple Sites:  $ update-wp.sh example-site,example-site-2,example-site-3", 
+            "title": "Update Site(s)"
+        }, 
+        {
+            "location": "/usage-guide/#delete-site", 
+            "text": "wp delete example-site", 
+            "title": "Delete Site"
+        }, 
+        {
+            "location": "/usage-guide/#clone-site", 
+            "text": "The  clone-wp.sh  script accepts two parameters. First, the site you want to clone. Second, the name of the new site where the existing site will be cloned to.  $ clone-wp.sh example-site example-site-clone", 
+            "title": "Clone Site"
+        }, 
+        {
+            "location": "/usage-guide/#alfred-usage", 
+            "text": "All of the Alfred launcher commands can be executed from the Alfred prompt. Toggle Alfred, or use your custom shortcode to show Alfred, and enter the commands below to execute the associated bash script.  Toggle Alfred   Alred Launcher", 
+            "title": "Alfred Usage"
+        }, 
+        {
+            "location": "/usage-guide/#install-site_1", 
+            "text": "wp create test-site", 
+            "title": "Install Site"
+        }, 
+        {
+            "location": "/usage-guide/#update-sites_1", 
+            "text": "Update All Sites:  wp update  Update Single Site:  wp update test-site  Update Multiple Sites:  wp update test-site,test-site-2,test-site-3", 
+            "title": "Update Site(s)"
+        }, 
+        {
+            "location": "/usage-guide/#delete-site_1", 
+            "text": "wp delete test-site", 
+            "title": "Delete Site"
+        }, 
+        {
+            "location": "/usage-guide/#clone-site_1", 
+            "text": "Step 1:  wp clone test-site  Step 2:\nIn step 2, simply enter the new site clone name.  test-site-clone", 
+            "title": "Clone Site"
+        }
+    ]
+}
