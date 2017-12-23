@@ -11,7 +11,7 @@
 # Include the valet config file.
 source $(dirname "$0")/valet-wp-config.sh
 
-if [ $# -ne 1 ]; then
+if [[ $# -ne 1 && -z "${ALFRED}" ]]; then
   echo -e "\x1b[31mError:\x1b[0m You did specify a site."
   read -p "Would you like to update all sites? (yes|no) " -n 1 -r
   if [[ $REPLY =~ ^[Nn]$ ]]
@@ -66,5 +66,3 @@ do
   wp plugin update --all --path=${SITE_PATH}/${i} && wp theme update --all --path=${SITE_PATH}/${i} && wp core update --path=${SITE_PATH}/${i}
 
 done
-
-exit 1
