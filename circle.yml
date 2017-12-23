@@ -9,6 +9,11 @@ general:
     only:
      - master
 
+# No tests contained in the CI/CD pipeline. Force 'no tests' to pass.
+test:
+  override:
+    - echo "pass"
+
 dependencies:
   pre:
     - npm run install-docs
