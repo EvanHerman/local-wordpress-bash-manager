@@ -61,4 +61,6 @@ echo -e "\033[1;92mSuccess:\x1b[m Database updated."
 
 echo -e "\033[1;92mSuccess:\x1b[m Site cloned.\nURL: http://$NEW_SITE$TLD"
 
+# Edit siteurl + home in database TODO
+
 open http://$NEW_SITE$TLD
