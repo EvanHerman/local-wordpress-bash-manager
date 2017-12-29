@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# Include the valet config file.
+# Include the wp config file.
 source $(dirname "$0")/wp-config.sh
 
 if [ $# -ne 1 ]; then

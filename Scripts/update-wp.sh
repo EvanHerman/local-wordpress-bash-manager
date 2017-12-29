@@ -8,8 +8,8 @@
 # update.sh site1             - Update site1
 # update.sh site1,site3,site5 - Update site1, site3 and site5
 
-# Include the valet config file.
-source $(dirname "$0")/valet-wp-config.sh
+# Include the wp config file.
+source $(dirname "$0")/wp-config.sh
 
 if [[ $# -ne 1 && -z "${ALFRED}" ]]; then
   echo -e "\x1b[31mError:\x1b[0m You did specify a site."
