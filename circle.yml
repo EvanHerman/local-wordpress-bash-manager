@@ -4,9 +4,10 @@ machine:
   python:
     version: 2.7.10
 
-branches:
-  only:
-    - master
+general:
+  branches:
+    only:
+      - master
 
 # No tests contained in the CI/CD pipeline. Force 'no tests' to pass.
 test:
