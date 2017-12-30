@@ -36,6 +36,7 @@ fi
 
 setup_deploy_variables ${SITE_PATH}/${1}/deploy-config.json
 
-echo -e "\033[0;33mStarting deploy of ${1}...\x1b[m"
+# deploy-config values are now usable as variables
+# example: echo ${URL}
 
-echo ${HOST}
+echo -e "\033[0;33mStarting deploy of ${1}...\x1b[m"

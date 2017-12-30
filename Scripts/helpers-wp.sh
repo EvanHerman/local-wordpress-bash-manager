@@ -76,12 +76,12 @@ function create_config() {
   # Loop & define the constants.
   for i in "${@}";
     do
-			# Setup new existing deploy-config.json contents.
-			new_contents=$(cat ${SITE_PATH}/${site_name}/deploy-config.json | jq '.PRODUCTION += {"'$(get_constant ${count})'": "'${i}'"}')
-			# Empty existing deploy-config.json contents.
-			> ${SITE_PATH}/${site_name}/deploy-config.json
-			# Add contents to existing deploy-config.json and format it.
-			echo ${new_contents} | jq '.' >> ${SITE_PATH}/${site_name}/deploy-config.json
+      # Setup new existing deploy-config.json contents.
+      new_contents=$(cat ${SITE_PATH}/${site_name}/deploy-config.json | jq '.PRODUCTION += {"'$(get_constant ${count})'": "'${i}'"}')
+      # Empty existing deploy-config.json contents.
+      > ${SITE_PATH}/${site_name}/deploy-config.json
+      # Add contents to existing deploy-config.json and format it.
+      echo ${new_contents} | jq '.' >> ${SITE_PATH}/${site_name}/deploy-config.json
       (( count++ ))
     done
 
@@ -115,16 +115,14 @@ function get_constant() {
 }
 
 # Setup the variables for the deploy/pull scripts.
+# Note: Loop over each item in deploy-config.json and make it an environment
+#       variable so we can use it in our scripts.
 #
 # ${1} Path to deploy-config.json for the site.
 function setup_deploy_variables() {
-
-	# Store the JSON array.
-	# constants=$(cat ${1} | jq '.PRODUCTION')
-  #
-	# echo ${constants}
-
-	constants=$(cat ${1} | jq '.PRODUCTION' | jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]")
-	#echo ${constants}
-
+  constants=$(cat ${1} | jq '.PRODUCTION' | jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]")
+  # Loop and eval the variables.
+  for key in ${constants}; do
+    eval ${key}
+  done
 }
