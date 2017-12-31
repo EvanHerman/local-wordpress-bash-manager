@@ -47,10 +47,28 @@ function setup_config() {
   read prodHostname
   echo -e "\033[0;32m4) Enter the production SSH/FTP user:\033[0m"
   read prodSSHUser
+  echo -e "\033[0;32m4) Enter the production SSH/FTP password (leave blank to use SSH keys):\033[0m"
+  read prodSSHPass
   echo -e "\033[0;32m5) Enter the production SSH/FTP port (default: 22):\033[0m"
   read prodPort
+  echo -e "\033[0;32m6) Enter the path to the uploads directory (default: ${prodWPRoot}/wp-content/uploads/):\033[0m"
+  read uploadDir
+  echo -e "\033[0;32m7) Enter the path to the plugins directory (default: ${prodWPRoot}/wp-content/plugins/):\033[0m"
+  read pluginDir
+  echo -e "\033[0;32m8) Enter the path to the themes directory (default: ${prodWPRoot}/wp-content/themes/):\033[0m"
+  read themeDir
+  echo -e "\033[0;32m9) Enter the production database host (default: localhost):\033[0m"
+  read dbHost
+  echo -e "\033[0;32m10) Enter the production database name:\033[0m"
+  read dbName
+  echo -e "\033[0;32m11) Enter the production database user:\033[0m"
+  read dbUser
+  echo -e "\033[0;32m12) Enter the production database password:\033[0m"
+  read dbPassword
+  echo -e "\033[0;32m13) Enter the post hook to run after deployment has completed. (eg: echo \"Deployment Complete!\"):\033[0m"
+  read postHook
   # Create the config file data array.
-  CONFIG_DATA=( ${prodURL} ${prodWPRoot} ${prodHostname} ${prodSSHUser} ${prodPort} )
+  CONFIG_DATA=( ${prodURL} ${prodWPRoot} ${prodHostname} ${prodSSHUser} ${prodSSHPass} ${prodPort} ${uploadDir} ${pluginDir} ${themeDir} ${dbHost} ${dbName} ${dbUser} ${dbPassword} ${postHook} )
   create_config ${1} "${CONFIG_DATA[@]}"
 }
 
@@ -111,6 +129,30 @@ function get_constant() {
   elif [ ${1} -eq 6 ]
   then
     echo "SFTP_PORT"
+  elif [ ${1} -eq 7 ]
+  then
+    echo "UPLOAD_DIR"
+  elif [ ${1} -eq 8 ]
+  then
+    echo "PLUGIN_DIR"
+  elif [ ${1} -eq 9 ]
+  then
+    echo "THEME_DIR"
+  elif [ ${1} -eq 10 ]
+  then
+    echo "DB_HOST"
+  elif [ ${1} -eq 11 ]
+  then
+    echo "DB_NAME"
+  elif [ ${1} -eq 12 ]
+  then
+    echo "DB_USER"
+  elif [ ${1} -eq 13 ]
+  then
+    echo "DB_PASS"
+  elif [ ${1} -eq 14 ]
+  then
+    echo "POST_HOOK"
   fi
 }
 
@@ -125,4 +167,15 @@ function setup_deploy_variables() {
   for key in ${constants}; do
     eval ${key}
   done
+}
+
+# Create the deploy directories in the site root.
+#
+# ${1} Site root.
+function create_deploy_dirs() {
+  # Deploys
+  if [[ ! -d ${1}/deploys ]]; then
+    mkdir ${1}/deploys
+    echo -e "\n\033[0;92mSuccess:\x1b[m Deploy directory created at \"${1}/deploys/\"."
+  fi
 }
