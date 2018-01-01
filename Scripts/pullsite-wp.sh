@@ -48,16 +48,16 @@ create_deploy_dirs ${SITE_ROOT}
 
 # SSh into the remote server and export the database.
 echo -e "\n\033[0;33mExporting remote database to ${WP_ROOT}/${1}-remote-${DATE}.sql...\x1b[m"
-ssh ${SFTP_USER}@${HOST} -p ${SFTP_PORT} -o LogLevel=QUIET -t "wp db export ${WP_ROOT}/${1}-remote-${DATE}.sql --path=${WP_ROOT} ; exit ; bash"
+ssh ${SSH_USER}@${HOST} -p ${SSH_PORT} -o LogLevel=QUIET -t "wp db export ${WP_ROOT}/${1}-remote-${DATE}.sql --path=${WP_ROOT} ; exit ; bash"
 
 # Download the remote site files to the local instance.
 echo -e "\n\033[0;33mDownloading remote site files to ${SITE_ROOT}/${1}.\x1b[m"
-rsync --exclude=wp-config.php --exclude=deploys -avz -e "ssh -p ${SFTP_PORT}" ${SFTP_USER}@${HOST}:${WP_ROOT}/* ${SITE_ROOT}
+rsync --exclude=wp-config.php --exclude=deploys -avz -e "ssh -p ${SSH_PORT}" ${SSH_USER}@${HOST}:${WP_ROOT}/* ${SITE_ROOT}
 echo -e "\033[0;92mSuccess:\x1b[m Remote site files successfully downloaded."
 
 # Delete the database export on the remote server
 echo -e "\n\033[0;33mDeleting temporary database dump from remote server.\x1b[m"
-ssh ${SFTP_USER}@${HOST} -p ${SFTP_PORT} -t "rm -rf ${WP_ROOT}/${1}-remote-${DATE}.sql ; exit ; bash"
+ssh ${SSH_USER}@${HOST} -p ${SSH_PORT} -t "rm -rf ${WP_ROOT}/${1}-remote-${DATE}.sql ; exit ; bash"
 echo -e "\033[0;92mSuccess:\x1b[m ${1}-remote-${DATE}.sql deleted from remote server."
 
 # Export the local site database and store it in deploys/backup.

@@ -122,13 +122,13 @@ function get_constant() {
     echo "HOST"
   elif [ ${1} -eq 4 ]
   then
-    echo "SFTP_USER"
+    echo "SSH_USER"
   elif [ ${1} -eq 5 ]
   then
-    echo "SFTP_PASSWORD"
+    echo "SSH_PASSWORD"
   elif [ ${1} -eq 6 ]
   then
-    echo "SFTP_PORT"
+    echo "SSH_PORT"
   elif [ ${1} -eq 7 ]
   then
     echo "UPLOAD_DIR"
