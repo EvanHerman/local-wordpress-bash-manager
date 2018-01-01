@@ -3,7 +3,6 @@
 # Include the wp config file.
 source $(dirname "$0")/wp-config.sh
 
-# Include the wp helpers file.
 source $(dirname "$0")/helpers-wp.sh
 
 # Confirm user specified a site name.
@@ -34,10 +33,14 @@ if [ ! -f "${SITE_PATH}/${1}/deploy-config.json" ]; then
   exit 1
 fi
 
-setup_deploy_variables ${SITE_PATH}/${1}/deploy-config.json
+ENVIRONMENT=$(get_environment_name "${SITE_PATH}/${1}/deploy-config.json" ${2})
 
-# deploy-config.json values are now usable as variables
+# Confirm deploy-config.json environment exists
+is_valid_environment "${SITE_PATH}/${1}/deploy-config.json" ${ENVIRONMENT}
+
+# Setup the variables from deploy-config.json
 # example: echo ${URL}
+setup_deploy_variables ${SITE_PATH}/${1}/deploy-config.json ${ENVIRONMENT}
 
 echo -e "\033[0;33mStarting pulldown of ${URL} to ${1}...\x1b[m"
 
