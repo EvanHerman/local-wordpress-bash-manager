@@ -39,7 +39,7 @@ $ clone-wp.sh example-site example-site-clone
 
 ### Pull a Remote Site Down into a Local Site ###
 
->>> Remote -> Local
+> Remote -> Local
 
 Pulling down a remote site into a local instance running on your machine is simple but requires that a `deploy-config.json` be present in the site root on your local machine. Running `pull-wp.sh example-site` for the first time will ask you to create the `deploy-config.json` file and will prompt you for the required fields. The `deploy-config.json` file is created in the site root of your local site.
 ```bash
@@ -48,7 +48,7 @@ $ pull-wp.sh example-site
 
 ### Deploy a Local Site up to a Remote Server ###
 
->>> Local -> Remote
+> Local -> Remote
 
 You also have the ability to deploy a local site up to a remote server. This makes developing sites locally and deploying them when you're ready as easy as pie. The deploy command also requires that the `deploy-config.json` be present in the site root of the site you want to deploy. Once setup, you can deploy your site to one of your environments by running `deploy-wp.sh example-site`. *Note:* It is possible to have multiple environments setup in  deploy-config.json file (eg. staging & production). This means you can deploy to a staging site for testing *before* deploying up to your production environment.
 ```bash
@@ -61,11 +61,11 @@ $ deploy-wp.sh example-site
 
 All of the Alfred launcher commands can be executed from the Alfred prompt, with the exception of `deploy-wp.sh` and `pull-wp.sh`. Toggle Alfred, or use your custom shortcode to show Alfred, and enter the commands below to execute the associated bash script.
 
-**Toggle Alfred**<br />
-<img src="/assets/img/docs/usage/toggle-alfred.png" title="Toggle Alfred Example" width="200" />
+**Toggle Alfred**
+[![Toggle Alfred Example](/assets/img/docs/usage/toggle-alfred.png)](/assets/img/docs/usage/toggle-alfred.png)
 
 **Alred Launcher**
-[![Toggle Alfred Example](/assets/img/docs/usage/create-site-demo-alfred-launcher.png)](/assets/img/docs/usage/create-site-demo-alfred-launcher.png)
+[![Create Site Alfred Example](/assets/img/docs/usage/create-site-demo-alfred-launcher.png)](/assets/img/docs/usage/create-site-demo-alfred-launcher.png)
 
 ### Install Site ###
 ```
