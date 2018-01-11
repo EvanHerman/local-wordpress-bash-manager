@@ -553,11 +553,7 @@ The following command will loop through all WordPress installs inside of your lo
 
 <h3 id="pull-a-remote-site-down-into-a-local-site">Pull a Remote Site Down into a Local Site</h3>
 <blockquote>
-<blockquote>
-<blockquote>
 <p>Remote -&gt; Local</p>
-</blockquote>
-</blockquote>
 </blockquote>
 <p>Pulling down a remote site into a local instance running on your machine is simple but requires that a <code>deploy-config.json</code> be present in the site root on your local machine. Running <code>pull-wp.sh example-site</code> for the first time will ask you to create the <code>deploy-config.json</code> file and will prompt you for the required fields. The <code>deploy-config.json</code> file is created in the site root of your local site.</p>
 <div class="codehilite"><pre><span></span>$ pull-wp.sh example-site
@@ -566,11 +562,7 @@ The following command will loop through all WordPress installs inside of your lo
 
 <h3 id="deploy-a-local-site-up-to-a-remote-server">Deploy a Local Site up to a Remote Server</h3>
 <blockquote>
-<blockquote>
-<blockquote>
 <p>Local -&gt; Remote</p>
-</blockquote>
-</blockquote>
 </blockquote>
 <p>You also have the ability to deploy a local site up to a remote server. This makes developing sites locally and deploying them when you're ready as easy as pie. The deploy command also requires that the <code>deploy-config.json</code> be present in the site root of the site you want to deploy. Once setup, you can deploy your site to one of your environments by running <code>deploy-wp.sh example-site</code>. <em>Note:</em> It is possible to have multiple environments setup in  deploy-config.json file (eg. staging &amp; production). This means you can deploy to a staging site for testing <em>before</em> deploying up to your production environment.</p>
 <div class="codehilite"><pre><span></span>$ deploy-wp.sh example-site
@@ -581,10 +573,10 @@ The following command will loop through all WordPress installs inside of your lo
 
 <h2 id="alfred-usage">Alfred Usage</h2>
 <p>All of the Alfred launcher commands can be executed from the Alfred prompt, with the exception of <code>deploy-wp.sh</code> and <code>pull-wp.sh</code>. Toggle Alfred, or use your custom shortcode to show Alfred, and enter the commands below to execute the associated bash script.</p>
-<p><strong>Toggle Alfred</strong><br />
-<img src="/assets/img/docs/usage/toggle-alfred.png" title="Toggle Alfred Example" width="200" /></p>
+<p><strong>Toggle Alfred</strong>
+<a href="../assets/img/docs/usage/toggle-alfred.png"><img alt="Toggle Alfred Example" src="../assets/img/docs/usage/toggle-alfred.png" /></a></p>
 <p><strong>Alred Launcher</strong>
-<a href="../assets/img/docs/usage/create-site-demo-alfred-launcher.png"><img alt="Toggle Alfred Example" src="../assets/img/docs/usage/create-site-demo-alfred-launcher.png" /></a></p>
+<a href="../assets/img/docs/usage/create-site-demo-alfred-launcher.png"><img alt="Create Site Alfred Example" src="../assets/img/docs/usage/create-site-demo-alfred-launcher.png" /></a></p>
 <h3 id="install-site_1">Install Site</h3>
 <div class="codehilite"><pre><span></span>wp create test-site
 </pre></div>
